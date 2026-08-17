@@ -1,0 +1,261 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f7f3ff;
+color:#29233d;
+}
+
+header{
+background:#6c3fc5;
+color:white;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+header h1{
+font-size:25px;
+}
+
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffd6f5;
+}
+
+.hero{
+min-height:400px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#6c3fc5,#d94f9d);
+color:white;
+padding:40px 20px;
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+button{
+background:#6c3fc5;
+color:white;
+border:none;
+padding:12px 22px;
+border-radius:6px;
+cursor:pointer;
+font-size:15px;
+}
+
+button:hover{
+background:#512d9b;
+}
+
+.hero button{
+background:white;
+color:#6c3fc5;
+}
+
+.hero button:hover{
+background:#ffe6f6;
+}
+
+.section{
+max-width:900px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 3px 15px rgba(108,63,197,0.15);
+}
+
+.section h2{
+text-align:center;
+margin-bottom:25px;
+color:#6c3fc5;
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+label{
+margin-top:12px;
+margin-bottom:6px;
+font-weight:bold;
+color:#4d3b66;
+}
+
+input,select,textarea{
+padding:12px;
+border:1px solid #d8ccef;
+border-radius:6px;
+font-size:15px;
+outline:none;
+}
+
+input:focus,select:focus,textarea:focus{
+border-color:#6c3fc5;
+box-shadow:0 0 5px rgba(108,63,197,0.2);
+}
+
+textarea{
+height:120px;
+resize:vertical;
+}
+
+form button{
+margin-top:20px;
+}
+
+#cancelBtn{
+background:#777;
+}
+
+.filters{
+display:flex;
+gap:15px;
+margin-bottom:25px;
+}
+
+.filters input{
+flex:1;
+}
+
+.filters select{
+width:200px;
+}
+
+.complaint-card{
+border:1px solid #e2d8f2;
+border-radius:8px;
+padding:20px;
+margin-bottom:15px;
+background:#fcfaff;
+}
+
+.complaint-card h3{
+color:#6c3fc5;
+margin-bottom:10px;
+}
+
+.complaint-card p{
+margin:7px 0;
+}
+
+.status{
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+margin:10px 0;
+}
+
+.pending{
+background:#fff0c2;
+color:#8a6200;
+}
+
+.progress{
+background:#dcd0ff;
+color:#5831a8;
+}
+
+.resolved{
+background:#d5f5df;
+color:#17733a;
+}
+
+.card-buttons{
+display:flex;
+gap:10px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.edit-btn{
+background:#9b59b6;
+}
+
+.edit-btn:hover{
+background:#7d3c98;
+}
+
+.delete-btn{
+background:#e74c3c;
+}
+
+.delete-btn:hover{
+background:#c0392b;
+}
+
+.status-btn{
+background:#d94f9d;
+}
+
+.status-btn:hover{
+background:#b83b80;
+}
+
+footer{
+background:#6c3fc5;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+
+@media(max-width:600px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+gap:10px;
+}
+
+.hero h2{
+font-size:30px;
+}
+
+.section{
+margin:20px 10px;
+padding:20px;
+}
+
+.filters{
+flex-direction:column;
+}
+
+.filters select{
+width:100%;
+}
+
+}

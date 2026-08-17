@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PG Complaint Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>PG Complaint Management</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#complaint">Submit Complaint</a>
+<a href="#complaints">Complaints</a>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div>
+<h2>Welcome to PG Complaint Management</h2>
+<p>Report your PG or apartment problems and track their resolution easily.</p>
+<button onclick="showSection('complaint')">Submit a Complaint</button>
+</div>
+</section>
+
+<section id="complaint" class="section">
+<h2 id="formTitle">Submit Complaint</h2>
+
+<form id="complaintForm">
+
+<input type="hidden" id="complaintId">
+
+<label>Resident Name</label>
+<input type="text" id="residentName" placeholder="Enter your name" required>
+
+<label>Room Number</label>
+<input type="text" id="roomNumber" placeholder="Enter room number" required>
+
+<label>Contact Number</label>
+<input type="tel" id="contact" placeholder="Enter contact number" required>
+
+<label>Complaint Category</label>
+<select id="category" required>
+<option value="">Select Category</option>
+<option>Electricity</option>
+<option>Plumbing</option>
+<option>Water Supply</option>
+<option>Internet</option>
+<option>Housekeeping</option>
+<option>Maintenance</option>
+<option>Other</option>
+</select>
+
+<label>Description</label>
+<textarea id="description" placeholder="Describe your complaint" required></textarea>
+
+<button type="submit" id="submitBtn">Submit Complaint</button>
+<button type="button" id="cancelBtn" onclick="resetForm()" style="display:none;">Cancel</button>
+
+</form>
+</section>
+
+<section id="complaints" class="section">
+<h2>Complaint Records</h2>
+
+<div class="filters">
+<input type="text" id="search" placeholder="Search complaints..." onkeyup="displayComplaints()">
+
+<select id="statusFilter" onchange="displayComplaints()">
+<option value="All">All Status</option>
+<option value="Pending">Pending</option>
+<option value="In Progress">In Progress</option>
+<option value="Resolved">Resolved</option>
+</select>
+</div>
+
+<div id="complaintList"></div>
+</section>
+
+<footer>
+<p>© 2026 PG Complaint Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
